@@ -12,10 +12,11 @@ student = Student.create(
     contact: '03026450768'
 )
 20.times do |i|
-    puts "creating#{i+1}"
+   
     Student.create(
-        first_name: 'Student #{i+1}',
-        last_name: 'Lname #{i+1}',
-        email: 'student#{i+1}@bootcamp.com'
+        first_name: "Student #{i+1}",
+        last_name: "Lname #{i+1}",
+        email: "student#{i+1}@bootcamp.com",
+        contact: "0123456789"
     )
 end
