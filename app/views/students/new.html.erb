@@ -3,6 +3,17 @@
 <%= form_with model: @student do |form|%>
 <div>
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <%= form.text_field :first_name %><br><br>
+
+    <%= form.label :last_name %>&nbsp;
+    <%= form.text_field :last_name %><br><br>
+    <%= form.label :email %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= form.text_field :email %><br><br>
+    <%= form.label :contact %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= form.text_field :contact %><br><br>
+
+
+<div>
+<%= form.submit %>
 </div>
 <% end %>
