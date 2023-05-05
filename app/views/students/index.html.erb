@@ -8,6 +8,7 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Contact</th>
+            <th colspan= "3">Actions</th>
          </tr>
     </thead>
     <tbody>
@@ -18,7 +19,8 @@
         <td><%= student.last_name %></td>
         <td><%= student.email %></td>
         <td><%= student.contact %></td>
-
+        <td><%= link_to 'View',student %></td>
+        <td><%= link_to 'Edit',student %></td>
     </tr>
     <% end %>
     
