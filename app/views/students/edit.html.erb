@@ -1,24 +1,5 @@
+<div class="bg-secondary-subtle shadow p-3 mb-5 bg-body-tertiary rounded p-2">
 <h1>Editing students</h1>
-<%= form_with model: @student do |form|%>
-<%#if @student.errors.any? %>
-  <%#@student.errors.full_messages.each do |message| %>
-    <%# <p><%= message %>
-  <%# end %>
-<%#end %>
-
-<div>
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %><br><br>
-
-    <%= form.label :last_name %>&nbsp;
-    <%= form.text_field :last_name %><br><br>
-    <%= form.label :email %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= form.text_field :email %><br><br>
-    <%= form.label :contact %>&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= form.text_field :contact %><br><br>
-
-
-<div>
-<%= form.submit %>
+<%= render "form" %>
+<%= link_to 'Back' ,students_path ,class:"btn btn-outline-secondary"%>
 </div>
-<% end %>

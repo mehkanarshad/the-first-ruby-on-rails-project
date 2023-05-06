@@ -1,3 +1,5 @@
+<div class="bg-secondary-subtle shadow p-3 mb-5 bg-body-tertiary rounded p-2"> 
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -29,15 +31,16 @@
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+  </div><br/>
 
   <div class="actions">
     <%= f.submit "Update" %>
-  </div>
+  </div><br/><br/>
 <% end %>
 
-<h3>Cancel my account</h3>
+<h3>Cancel my account</h3><br/>
 
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+<div><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div><br/>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back ,class:"btn btn-secondary"%>
+
