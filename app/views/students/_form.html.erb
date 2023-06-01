@@ -1,14 +1,20 @@
-<%= form_with model: @student do |form|%>
-<%#if @student.errors.any? %>
-  <%#@student.errors.full_messages.each do |message| %>
-    <%# <p><%= message %>
-  <%# end %>
-<%#end %>
+<%= form_with(model: @student) do |form| %>
+ <% if @student.errors.any? %>
+  <div style="color: red">
+    <h2><%= pluralize(@student.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+    <ul>
+      <% @student.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 
 <div>
     <%= form.label :first_name %>
     <%= form.text_field :first_name %><br><br>
-
     <%= form.label :last_name %>&nbsp;
     <%= form.text_field :last_name %><br><br>
     <%= form.label :email %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
