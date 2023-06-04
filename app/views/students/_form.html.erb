@@ -13,15 +13,15 @@
 
 
 <div>
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %><br><br>
-    <%= form.label :last_name %>&nbsp;
-    <%= form.text_field :last_name %><br><br>
-    <%= form.label :email %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= form.text_field :email %><br><br>
-    <%= form.label :contact %>&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= form.text_field :contact %><br><br>
+    <%= form.text_field :first_name ,placeholder: "Enter First name",style:"width: 100%; height:40px"%></br><br>
+    <%= form.text_field :last_name ,placeholder: "Enter Last name",style:"width: 100%; height:40px"%></br><br>
+    <%= form.text_field :email ,placeholder: "Enter Email",style:"width: 100%; height:40px"%></br><br>
+    <%= form.text_field :contact ,placeholder: "Enter Contact",style:"width: 100%; height:40px"%></br><br>
+    <%= form.date_field :dob ,placeholder: "Enter Date of birth",style:"width: 100%; height:40px"%></br><br>
+    <%= form.text_field :age ,placeholder: "Enter Age",style:"width: 100%; height:40px"%></br><br>
+    <%= form.text_field :address ,placeholder: "Enter Address",style:"width: 100%; height:40px"%></br><br>
 <div>
-<%= form.submit %><br/><br/>
+<%= form.submit %></br><br/></br><br/>
 </div>
 <% end %>
+

@@ -12,7 +12,7 @@
          </tr>
     </thead>
     <tbody>
-   
+
     <% @students.each do |student| %>
     <tr>
         <td><%= student.first_name %></td>
@@ -21,11 +21,12 @@
         <td><%= student.contact %></td>
         <td><%= link_to 'View',student ,class:"btn btn-outline-secondary" %></td>
         <td><%= link_to 'Edit', edit_student_path(student)  ,class:"btn btn-outline-secondary"%></td>
-        <td><%= button_to 'Delete', student_path(student), :method => :delete , class:"btn btn-outline-secondary"%></td>
+        <%# <td><%= button_to 'Delete', student_path(student), :method => :delete , class:"btn btn-outline-secondary"%>
+        <td><%= button_to 'Delete', @student, method: :delete, class: "btn btn-outline-secondary" %></td>
 
     </tr>
     <% end %>
-    
+
     </tbody>
 </table>
 </div>
