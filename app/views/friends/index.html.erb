@@ -3,14 +3,31 @@
 <br/><br/>
 <h1>Friends</h1>
 
-<div id="friends">
-  <% @friends.each do |friend| %>
-    <%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend ,class: "btn btn-secondary"%>
-    </p>
-  <% end %>
-</div>
+<table class= "table table-striped table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>User Id</th>
+      <th>Actions</th>
 
+    </tr>
+  </thead>
+  <tbody>
+    <% @friends.each do |friend| %>
+      <tr>
+        <td><%= friend.first_name %></td>
+        <td><%= friend.email %></td>
+        <td><%= friend.id %></td>
 
-<%= link_to "New friend", new_friend_path  ,class: "btn btn-secondary"%>
+        <td>
+          <%= link_to "Show", friend, class: "btn btn-outline-secondary" %>
+          <%= link_to "Edit", edit_friend_path(friend), class: "btn btn-outline-secondary" %>
+          <%= link_to "Delete", friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-secondary" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path, class: "btn btn-secondary" %>

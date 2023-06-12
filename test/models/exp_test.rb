@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ModelTest < ActiveSupport::TestCase
+class ExpTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
