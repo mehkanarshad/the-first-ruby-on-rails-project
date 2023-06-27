@@ -31,12 +31,12 @@
     <%= form.text_field :phone %>
   </div>
 
-  <%# <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%# <%= form.text_field :user_id %>
-  <%# </div> %>
-
+  <div>
+    <% form.label :user_id,id: :friend_user_id, style: "display: block" %>
+    <%= form.number_field :user_id ,value: current_user.id ,type: :hidden%>
+   </div>
+<br/><br/>
   <div >
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-secondary"%>
   </div>
 <% end %>

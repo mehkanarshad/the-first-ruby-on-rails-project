@@ -3,8 +3,15 @@
 <%= render @friend %>
 
 <div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend) ,class: "btn btn-secondary" %> <br/><br/>
-  <%= link_to "Back to friends", friends_path ,class: "btn btn-secondary"%><br/><br/>
+   <%= link_to "Back to friends", friends_path ,class: "btn btn-secondary"%><br/><br/>
 
-  <%= button_to "Destroy this friend", @friend, method: :delete ,class: "btn btn-secondary"%>
+  <%# <%= link_to "Edit this friend", edit_friend_path(@friend) ,class: "btn btn-secondary" %>
+
+  <%# <%= button_to "Destroy this friend", @friend, method: :delete ,class: "btn btn-secondary"%>
+   <% if @friend.user == current_user %>
+         <%= button_to "Destroy this friend", @friend, method: :delete ,class: "btn btn-outline-secondary"%><br/>
+          <%= link_to "Edit" , edit_friend_path(@friend), class: "btn btn-outline-secondary" %>
+          <%# <%= link_to "Delete", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-secondary" %>
+
+          <% end %>
 </div>
